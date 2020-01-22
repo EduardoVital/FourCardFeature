@@ -1,0 +1,129 @@
+//HEADER
+
+.header {
+    margin: 70px 0;
+    text-align: center;
+
+    & h2 {
+        font-size: 26px;
+        font-weight: 400;
+        margin-bottom: 5px;
+    }
+
+    & h2:last-of-type {
+        word-spacing: 5px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    & p {
+        font-weight: 200;
+        line-height: 25px;
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+//MAIN
+
+.content {
+    padding-bottom: 15px;
+
+    & .container {
+        max-width: 90%;
+        margin: 0 auto;
+
+        & .content__blocks {
+            padding-bottom: 20px;
+
+            & .blocks {
+                padding: 10px 20px;
+                box-shadow: 0px 5px 20px 0px #00000038;
+                border-radius: 5px;
+                border-top: 5px solid $primary-Cyan;
+
+                & .text {
+                    & h3 {
+                        padding: 10px 0;
+                        font-weight: 600;
+                        font-size: 22px;
+                    }
+
+                    & p {
+                        font-weight: 200;
+                        line-height: 25px;
+                        padding-bottom: 25px;
+                    }
+                }
+
+                & .image {
+                    text-align: right;
+                }
+            }
+        }
+
+        & .--second-of-type {
+            & .blocks:nth-child(1) {
+                margin-bottom: 20px;
+                border-color: $primary-Red;
+            }
+
+            & .blocks {
+                border-color: $primary-Orange;
+            }
+        }
+
+        & .--last-of-type {
+            & .blocks {
+                border-color: $primary-Blue;
+            }
+        }
+    }
+}
+
+
+
+// DESKTOP
+
+@media(min-width: $desktop) {
+
+    //HEADER
+    .header {
+        & h2 {
+            font-size: 38px;
+        }
+
+        & p {
+            font-weight: 200;
+            line-height: 25px;
+            width: 40%;
+            margin: 0 auto;
+        }
+    }
+
+    //MAIN
+    .content {
+        .container {
+            display: flex;
+            align-items: center;
+            max-width: 85%;
+
+            .content__blocks {
+                margin: 0 20px;
+                width: 33%;
+
+                & .blocks {
+                    & .text {
+                        & p {
+                            padding-bottom: 40px;
+                        }
+                    }
+
+                    & .image {
+                        padding-bottom: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
